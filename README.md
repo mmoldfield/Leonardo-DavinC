@@ -4,27 +4,16 @@ Java program that reads in a .txt file containing instructions, and then draws a
 
 ``
 rotate -45
-
 move 30
-
 FG 1
-
 Pattern #
-
 DRAW 10
-
 Rotate 90
-
 draw 10
-
 ROTATE 90
-
 dRAW 10
-
 ROTATE 90
-
 DRAW 10
-
 ``
 
 ## Getting Started
