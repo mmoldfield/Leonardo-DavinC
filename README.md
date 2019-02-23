@@ -1,8 +1,32 @@
 # Leonardo-DavinC
 
-Java program that reads in election poll data and allows the user to search, sort and filter this information. Also allows the user to compute which locations will benefit the most from additional campaiging, and creates an itinerary based on this.
+Java program that reads in a .txt file containing instructions, and then draws an ASCII art picture according to these instructions. For example:
 
-All data structures used in this program were created by myself, to cement my understanding of how they work.
+``
+
+rotate -45
+
+move 30
+
+FG 1
+
+Pattern #
+
+DRAW 10
+
+Rotate 90
+
+draw 10
+
+ROTATE 90
+
+dRAW 10
+
+ROTATE 90
+
+DRAW 10
+
+``
 
 ## Getting Started
 
