@@ -3,7 +3,6 @@
 Java program that reads in a .txt file containing instructions, and then draws an ASCII art picture according to these instructions. For example:
 
 ``
-
 rotate -45
 
 move 30
