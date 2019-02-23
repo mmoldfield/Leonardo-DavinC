@@ -53,6 +53,62 @@ The following data structures were created by myself, as part of the unit Data S
 Graph.java, HashTable.java, Heap.java, LinkedList.java, Stack.java
 ``
 
+********************************************************************************
+Name: Matthew Oldfield
+File: readme.txt
+********************************************************************************
+
+List of files
+
+    startup.c / startup.h
+    - simple file that contains the main method
+
+    core.c / core.h
+    - controls the navigation of the program
+
+    execute.c / execute.h
+    - responsible for drawing ascii art
+
+    fileio.c / fileio.h
+    - responsible for reading in input file
+
+    linkedlist.c / linkedlist.h
+    - standard linkedlist implementation (program specific nodes)
+
+    effects.c / effects.h
+    - contains plotting functions - code by Dr. David Cooper
+
+    universal.h
+    - contains preprocessor macros needed by multiple files in the program
+
+Instructions
+
+    1. Navigate to program directory in a unix terminal and type in 'make'
+    2. To run program, type './TurtleGraphics testfiles/charizard.txt'
+        * Replace charizard.txt with whatever file you desire
+
+Bugs and Improvements
+
+    Functionality wise, this program is pretty much complete. With more time,
+    I would have liked to clean up some of my control structures and perhaps
+    write up some better error messages. That being said, the program should be
+    fully functional for the purpose of this assignment (perhaps I will revamp
+    it during the holidays)
+
+Computer Used
+    
+    Curtin Building 314, Lab 220-c04 (Ubuntu Linux)
+    Program may not compile on other hardware.
+
+References
+
+    All code is my own, however I owe credit to the Curtin University lecture
+    slides for providing sample linked list code. I used this as a guide when
+    designing my own code.
+
+
+
+
 
 
 
