@@ -1,0 +1,135 @@
+test :
+	make clean
+	make $(EXEC1)
+	make $(EXEC2)
+	make $(EXEC3)
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	testfiles/charizard.txt 
+	#******************************* valid *************************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	testfiles/diamond.txt
+	#******************************* valid *************************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	testfiles/blankfile.txt testfiles/charizard.txt #too many args
+	#********************invalid: too many args ********************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) 
+	#***************************invalid: not enough args ***********************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	testfiles/blankfile.txt #blank file
+	#*******************************invalid: blank file ************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	testfiles/blanktop.txt 
+	#*********************invalid: blank first line ****************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	testfiles/invnumargs.txt
+	#*********************invalid: too many instructions on one line ***********
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	testfiles/invargsize.txt
+	#*********************invalid: invalid arg size ****************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	testfiles/invoverflow.txt
+	#*********************invalid: line too long  ******************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	testfiles/invname.txt
+	#*********************invalid: wrong cmd name ******************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC1) \
+	TurtleGraphics
+	#*********************invalid: calling itself ******************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	testfiles/charizard.txt 
+	#******************************* valid *************************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	testfiles/diamond.txt
+	#******************************* valid *************************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	testfiles/blankfile.txt testfiles/charizard.txt #too many args
+	#********************invalid: too many args ********************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) 
+	#***************************invalid: not enough args ***********************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	testfiles/blankfile.txt #blank file
+	#*******************************invalid: blank file ************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	testfiles/blanktop.txt 
+	#*********************invalid: blank first line ****************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	testfiles/invnumargs.txt
+	#*********************invalid: too many instructions on one line ***********
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	testfiles/invargsize.txt
+	#*********************invalid: invalid arg size ****************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	testfiles/invoverflow.txt
+	#*********************invalid: line too long  ******************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	testfiles/invname.txt
+	#*********************invalid: wrong cmd name ******************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC2) \
+	TurtleGraphics
+	#*********************invalid: calling itself ******************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	testfiles/charizard.txt 
+	#******************************* valid *************************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	testfiles/diamond.txt
+	#******************************* valid *************************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	testfiles/blankfile.txt testfiles/charizard.txt #too many args
+	#********************invalid: too many args ********************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) 
+	#***************************invalid: not enough args ***********************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	testfiles/blankfile.txt #blank file
+	#*******************************invalid: blank file ************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	testfiles/blanktop.txt 
+	#*********************invalid: blank first line ****************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	testfiles/invnumargs.txt
+	#*********************invalid: too many instructions on one line ***********
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	testfiles/invargsize.txt
+	#*********************invalid: invalid arg size ****************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	testfiles/invoverflow.txt
+	#*********************invalid: line too long  ******************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	testfiles/invname.txt
+	#*********************invalid: wrong cmd name ******************************
+
+	valgrind --track-origins=yes --leak-check=full ./$(EXEC3) \
+	TurtleGraphics
+	#*********************invalid: calling itself ******************************
+
