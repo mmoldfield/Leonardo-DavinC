@@ -54,7 +54,7 @@ make TurtleGraphicsSimple
 ./TurtleGraphicsSimple testfiles/charizard.txt
 ```
 
-To run the proigram in debug mode
+To run the program in debug mode
 ```
 make clean
 make TurtleGraphicsDebug
